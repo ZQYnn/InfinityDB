@@ -19,6 +19,7 @@ func NewFileIOManager(fileName string) (*FileIO, error) {
 
 // Read FileIO类 实现io_manager中的read方法
 func (fio *FileIO) Read(b []byte, offset int64) (int, error) {
+
 	return fio.fd.ReadAt(b, offset)
 }
 
