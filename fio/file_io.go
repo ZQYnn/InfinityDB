@@ -6,6 +6,7 @@ type FileIO struct {
 	fd *os.File
 }
 
+// NewFileIOManager 初始化标准文件
 func NewFileIOManager(fileName string) (*FileIO, error) {
 	fd, err := os.OpenFile(
 		fileName,
